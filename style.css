@@ -259,6 +259,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
+    margin-top: auto;
 }
 
 .tech-stack span {
@@ -308,6 +309,15 @@ body {
     border: 1px solid #1e1e1e;
     padding: 30px;
     border-radius: 24px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+    box-shadow: 0 0 40px rgba(255,255,255,0.04);
 }
 
 .review-text {
@@ -319,9 +329,10 @@ body {
 }
 
 .review-author {
+    margin-top: auto;
     color: #555;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
 
