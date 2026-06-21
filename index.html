@@ -165,6 +165,7 @@
                 </div>
                 <p class="case-description">
                     Провел комплексный аудит безопасности сетевого периметра и проверку архитектуры игрового проекта (метод Black Box). Тестировал устойчивость инфраструктуры к DDoS-атакам и бот-флуду.<br><br>
+				<br></br>
                     В ходе анализа подтвердил настройку фильтрации портов, скрытие бэкенда за прокси-фильтрами хостинга и корректное развертывание связки Velocity с сетевой защитой.
                 </p>
                 <div class="tech-stack">
@@ -175,6 +176,47 @@
                     <span>Network Recon</span>
                 </div>
                 <a href="assets/reports/andromedaworld.pdf" class="download-btn" download>
+                    <i class="fa-solid fa-download"></i> Скачать отчет
+                </a>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <h3>Vegrom</h3>
+                </div>
+                <p class="case-description">
+                    Провел комплексный аудит безопасности игрового проекта mc.vegrom.ru (метод Black Box). Выполнил OSINT-разведку DNS-истории, сканирование системных портов через Nmap и проверку игрового контура на устойчивость к бот-флуду и краш-пакетам.
+				<br></br>
+                    Инфраструктурная часть в отличном состоянии: сетевой файрвол настроен грамотно, прямого обхода DDoS-защиты и утечек конфигурационных файлов бэкенда не обнаружено. Однако на веб-периметре выявил отсутствие некоторых важных заголовков безопасности. Проблемы успешно устранены добавлением Strict-Transport-Security и X-Frame-Options в конфиг Nginx.
+                </p>
+                <div class="tech-stack">
+                    <span>Linux</span>
+                    <span>Next.js</span>
+                    <span>Nginx</span>
+                    <span>DDoS-Guard</span>
+                    <span>Network Recon</span>
+                    <span>OSINT</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <h3>FantasyBox</h3>
+                </div>
+                <p class="case-description">
+                    Провел комплексный аудит безопасности серверной инфраструктуры проекта (метод Black Box). Главный плюс архитектуры — все три поддомена защищены разными независимыми способами, что исключает веерный отказ всей сети при точечной атаке. Веб-периметр полностью скрыт за прокси-защитой DDoS-Guard, основной игровой контур (порт 25565) маршрутизируется через шлюзы SRVGAME, а вспомогательный контур изолирован на уровне сегментации групп IP-адресов. Проверка через OSINT (Shodan) и анализ IPv6-записей подтвердили полную изоляцию периметра хостинга.
+				<br></br>
+      				Внешний периметр настроен идеально. В качестве профилактики защиты даны рекомендации по жесткой настройке локального Firewall (UFW/iptables) на стороне Origin-сервера для фильтрации пакетов строго от доверенных IP прокси-систем.
+                </p>
+                <div class="tech-stack">
+                    <span>Linux</span>
+                    <span>Nginx</span>
+                    <span>DDoS-Guard</span>
+                    <span>SRVGAME</span>
+                    <span>Network Recon</span>
+                    <span>OSINT</span>
+                </div>
+                <a href="assets/reports/fantasybox.pdf" class="download-btn" download>
                     <i class="fa-solid fa-download"></i> Скачать отчет
                 </a>
             </div>
@@ -220,6 +262,24 @@
                 </div>
             </div>
 
+            <div class="review-card">
+                <p class="review-text">
+                    "Сотрудничал с Rotation командой по вопросу безопасности сервера Vegrom. Ребята проявили высокий уровень профессионализма: аудит провели оперативно, нашли уязвимости, о которых я даже не подозревал, и дали четкие рекомендации по их устранению. Очень доволен результатом, рекомендую всем, кто заботится о безопасности своего проекта."
+                </p>
+                <div class="review-author">
+                    – Вадяй (Vegrom)
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <p class="review-text">
+                    "Спасибо за аудит и подробный отчёт, всё грамотно расписано. По аудиту все прекрасно и уязвимостей выявлено не было."
+                </p>
+                <div class="review-author">
+                    – Vert1se (FantasyBox)
+                </div>
+            </div>
+            
         </div>
 
     </section>
