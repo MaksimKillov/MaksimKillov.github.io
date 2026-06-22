@@ -132,6 +132,18 @@ body {
     border-bottom: 1px solid #222;
 }
 
+.chat-bubble a {
+    color: white;                 /* Делаем текст ссылки белым */
+    text-decoration: underline;   /* Оставляем подчеркивание, чтобы было понятно, что это ссылка */
+    text-decoration-color: #333;  /* Но делаем само подчеркивание темно-серым и аккуратным */
+    transition: 0.3s ease;
+}
+
+.chat-bubble a:hover {
+    color: #888;                  /* При наведении ссылка будет красиво тускнеть */
+    text-decoration-color: #888;
+}
+
 .chat-bubble p {
     color: #bcbcbc;
     line-height: 1.7;
